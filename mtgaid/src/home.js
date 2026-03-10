@@ -1,21 +1,10 @@
 import './App.css';
-import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
 import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
 import logomtg from './assets/logomtg.svg';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import SplitButton from 'react-bootstrap/SplitButton';
 
 function Home() {
   return (

@@ -1,5 +1,44 @@
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
+import logomtg from './assets/logomtg.svg';
+import { Link } from "react-router-dom";
+
 function Timeline() {
-  return <h2>Timeline</h2>;
+  return (
+    <body class="bodyBG">
+      <section>
+        <h1 class="heading1">Timeline</h1>
+
+          <>
+      {[DropdownButton].map((DropdownType, idx) => (
+        <DropdownType
+          key={idx}
+          id={`dropdown-button-drop-${idx}`}
+          size="lg"
+          title="Choose a set"
+        >
+          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
+          <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
+          <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
+          <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+        </DropdownType>
+      ))}
+    </>
+
+    <footer class="alternativeBG">
+        <div class="container-fluid">
+        <Link to="/"><img src={logomtg} class="logoFooter"></img></Link>
+
+        <Link to="/" class="pageLinks">Home</Link> 
+        <Link to="/compare" class="pageLinks">Compare</Link> 
+        <Link to="/timeline" class="pageLinks">Timeline</Link> 
+        </div>
+      </footer>
+
+      </section>
+    </body>
+  )
 }
 
 export default Timeline;
