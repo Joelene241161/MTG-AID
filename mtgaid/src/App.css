@@ -111,7 +111,6 @@ nav {
 .bodyTextB {
   color:#0E3D19;
   font-size:large;
-  padding-bottom: 4%;
   padding-right: 20%;
 }
 
@@ -153,4 +152,17 @@ nav {
   padding-right: 13%;
   padding-top: 2%;
   padding-bottom: 1%;
+}
+
+.singleCard {
+  width: 90%;
+  padding: 7%;
+  padding-left: 30%;
+}
+
+.loadingText{
+  color: #61dafb;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }

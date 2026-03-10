@@ -5,6 +5,7 @@ import logomtg from './assets/logomtg.svg';
 import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import SingleCard from "./singleCard";
 
 function Home() {
   return (
@@ -24,34 +25,8 @@ function Home() {
     </section>
 
     <section class="alternativeBG">
-        <h1 class="heading1B">Card example info</h1>
-        <div class="container-fluid row">
-            <div class="col-lg-5">
-            <img src={fillerHeroHeader} class="heroImage"></img>
-            </div>
-            <div class="col-lg-7">
-              <h2 class="heading2">Card name:</h2>
-              <p class="bodyTextB">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
-        <div class="container-fluid row">
-            <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-            </div> 
-            <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-            </div> 
-            <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-            </div> 
-        </div> 
-            </div>
-        </div>
+        <h1 class="heading1B">What information a typical card contains</h1>
+        <SingleCard />
     </section>
 
     <section>

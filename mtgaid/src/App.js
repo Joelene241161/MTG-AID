@@ -9,12 +9,11 @@ import Compare from "./compare";
 
 function App() {
   return (
-    <div>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+    <BrowserRouter>
+    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </link>
-    <BrowserRouter>
 
       <nav activeKey="/home"
       onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
@@ -34,7 +33,6 @@ function App() {
       </Routes>
 
     </BrowserRouter>
-    </div>
   );
 }
 

@@ -26,6 +26,7 @@ function Timeline() {
       ))}
     </>
 
+</section>
     <footer class="alternativeBG">
         <div class="container-fluid">
         <Link to="/"><img src={logomtg} class="logoFooter"></img></Link>
@@ -36,7 +37,7 @@ function Timeline() {
         </div>
       </footer>
 
-      </section>
+      
     </body>
   )
 }
