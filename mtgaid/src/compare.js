@@ -1,8 +1,7 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
-import logomtg from './assets/logomtg.svg';
-import { Link } from "react-router-dom";
+import NavigationBar from './navigationBar';
 
 function Compare() {
   return(
@@ -96,17 +95,7 @@ function Compare() {
       <h2 class="heading2B">Rarity or date</h2>
 
   </section>
-
-  <footer class="alternativeBG">
-        <div class="container-fluid">
-        <Link to="/"><img src={logomtg} class="logoFooter"></img></Link>
-
-        <Link to="/" class="pageLinks">Home</Link> 
-        <Link to="/compare" class="pageLinks">Compare</Link> 
-        <Link to="/timeline" class="pageLinks">Timeline</Link> 
-        </div>
-      </footer>
-
+      <NavigationBar />
     </body>
   )
 }

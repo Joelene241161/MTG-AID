@@ -166,3 +166,12 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+.tagGroupHome {
+  display: flex;
+  justify-content: center;
+}
+
+.styleAccordion{
+  padding-top: 6%;
+}
