@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
+    <body class="bodyBG">
     <footer class="alternativeBG">
         <div class="container-fluid">
         <Link to="/"><img src={logomtg} class="logoFooter"></img></Link>
@@ -12,6 +13,7 @@ function NavigationBar() {
         <Link to="/timeline" class="pageLinks">Timeline</Link> 
         </div>
       </footer>
+    </body>
   )
 }
 
