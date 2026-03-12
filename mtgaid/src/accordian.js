@@ -9,7 +9,6 @@ function AccordionLearn() {
   const cardId = "386615";
 
   const getCard = () => {
-    // 2. Append the ID to the end of the URL
     fetch(`https://api.magicthegathering.io/v1/cards/${cardId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -24,7 +23,7 @@ function AccordionLearn() {
 
   //html that will be displayed on the home page
   return (
-    <div>
+    <div style={{paddingBottom: 40}}>
       {card ? ( //checks if card has been loaded
         <div key={card.id} class="container-fluid row">
           <div class="col-lg-5">
@@ -32,10 +31,10 @@ function AccordionLearn() {
             </div>
 
         <div class="col-lg-7 styleAccordion">
-              <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Mana Cost</Accordion.Header>
-        <Accordion.Body>
+              <Accordion  defaultActiveKey="0">
+      <Accordion.Item  eventKey="0">
+        <Accordion.Header >Mana Cost</Accordion.Header>
+        <Accordion.Body >
           You use mana to cast (play) spells. All spell cards have a mana cost in the top right corner of the card. Mystic of the Hidden Way's mana cost is one blue mana and four of any colour.
         </Accordion.Body>
       </Accordion.Item>

@@ -8,7 +8,6 @@ function SingleCard() {
   const cardId = "386616";
 
   const getCard = () => {
-    // 2. Append the ID to the end of the URL
     fetch(`https://api.magicthegathering.io/v1/cards/${cardId}`)
       .then((response) => response.json())
       .then((data) => {
@@ -35,16 +34,16 @@ function SingleCard() {
               <p class="bodyTextB">{card.text}</p>
         <div class="container-fluid row">
             <div>
-              <button class="tagButton">Mana cost: {card.cmc}</button>
-              <button class="tagButton">Colour: {card.colorIdentity}</button>
-              <button class="tagButton">Supertype: {card.supertypes}</button>
-              <button class="tagButton">Type: {card.types}</button>
-              <button class="tagButton">Subtype: {card.subtypes}</button>
-              <button class="tagButton">Rarity: {card.rarity}</button>
-              <button class="tagButton">Set: {card.set}</button>
-              <button class="tagButton">Artist: {card.artist}</button>
-              <button class="tagButton">Power: {card.power}</button>
-              <button class="tagButton">Toughness: {card.toughness}</button>
+              <label class="tagButton">Mana cost: {card.cmc}</label>
+              <label class="tagButton">Colour: {card.colorIdentity}</label>
+              <label class="tagButton">Supertype: {card.supertypes}</label>
+              <label class="tagButton">Type: {card.types}</label>
+              <label class="tagButton">Subtype: {card.subtypes}</label>
+              <label class="tagButton">Rarity: {card.rarity}</label>
+              <label class="tagButton">Set: {card.set}</label>
+              <label class="tagButton">Artist: {card.artist}</label>
+              <label class="tagButton">Power: {card.power}</label>
+              <label class="tagButton">Toughness: {card.toughness}</label>
             </div> 
         </div> 
             </div>
@@ -62,20 +61,20 @@ function SingleCard() {
               <p class="bodyTextB">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
         <div class="container-fluid row">
             <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
             </div> 
             <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
             </div> 
             <div>
-              <button class="tagButton">Information</button>
-              <button class="tagButton">Information</button>
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
             </div> 
         </div> 
             </div>

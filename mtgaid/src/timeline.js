@@ -15,6 +15,7 @@ function Timeline() {
           id={`dropdown-button-drop-${idx}`}
           size="lg"
           title="Choose a set"
+          variant="info"
         >
           <Dropdown.Item eventKey="1">Action</Dropdown.Item>
           <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
