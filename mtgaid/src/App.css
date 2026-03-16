@@ -179,3 +179,36 @@ nav {
 .styleAccordion{
   padding-top: 6%;
 }
+
+.buttonMiddle {
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+
+.bodyTextCenter {
+  color: white;
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
+.styleChart {
+  padding: 5%;
+}
+
+.styleChartPie {
+  padding: 24%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.styleChartRadar {
+  padding: 24%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.chartPadding {
+  padding: 4%;
+}

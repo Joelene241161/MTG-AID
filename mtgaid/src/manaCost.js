@@ -1,43 +1,27 @@
-import {
- Chart as ChartJS,
- CategoryScale,
- LinearScale,
- PointElement,
- LineElement
-} from "chart.js";
-import { Line } from "react-chartjs-2";
-import { Bar } from 'react-chartjs-2';
-
-ChartJS.register(
- CategoryScale,
- LinearScale,
- PointElement,
- LineElement
-);
-
-const data = {
-     
- datasets: [
-   {
-     label: "Card 1",
-     data: [6],
-     borderWidth: 2
-   },
-   {
-     label: "Card 2",
-     data: [4],
-     borderWidth: 2
-   }
- ]
-};
+import Chart from "chart.js/auto";
+import { Bar } from "react-chartjs-2";
 
 const ManaCost = () => {
- return (
-   <div>
-     <h2>Weekly Attendance</h2>
-     <Line data={data} />
-   </div>
- );
+ const labels = ["Card 1", "Card 2"];
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Mana Cost",
+        backgroundColor: ["#61dafb", "#FEFBD6"],
+        borderColor: "#0E3D19",
+        data: [7, 4],
+      },
+    ],
+  };
+  return (
+    <div class="col-lg-4">
+      <h2 class="heading2B">Mana cost</h2>
+      <div class="styleChart">
+      <Bar data={data} />
+    </div>
+    </div>
+  );
 };
 
 export default ManaCost;

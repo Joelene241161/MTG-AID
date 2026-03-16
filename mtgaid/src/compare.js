@@ -1,7 +1,8 @@
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
 import NavigationBar from './navigationBar';
+import ManaCost from './manaCost';
+import PowerToughness from './powerToughness';
+import ManaColours from './manaColour';
 
 function Compare() {
   return(
@@ -10,19 +11,22 @@ function Compare() {
     <h1 class="heading1">Compare 2 creature cards</h1>
   <div class="container-fluid row">
     <div class="col-lg-6">
-      <h2 class="heading2B">Card name: </h2>
 
-    <button class="primaryButton">Randomise card</button>
+    <div class="buttonMiddle">
+      <button class="primaryButton">Randomise card</button>
+    </div>
+
+    <h2 class="heading2B">Card name: </h2>
 
     <img src={fillerHeroHeader} class="heroImage"></img>
-    <p class="bodyText">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
+    <p class="bodyTextCenter">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
 
     <div class="container-fluid row">
-            <div>
+            <div class="tagGroupHome">
               <label class="tagButton">Information</label>
               <label class="tagButton">Information</label>
             </div> 
-            <div>
+            <div class="tagGroupHome">
               <label class="tagButton">Information</label>
               <label class="tagButton">Information</label>
             </div> 
@@ -30,19 +34,23 @@ function Compare() {
 
     </div>
     <div class="col-lg-6">
-      <h2 class="heading2B">Card name: </h2>
+      
+      <div class="buttonMiddle">
+      <button class="primaryButton">Randomise card</button>
+    </div>
 
-      <button class="primaryButton">Choose random card</button>
+    <h2 class="heading2B">Card name: </h2>
 
       <img src={fillerHeroHeader} class="heroImage"></img>
-      <p class="bodyText">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
+      
+      <p class="bodyTextCenter">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
 
       <div class="container-fluid row">
-            <div>
-              <label class="tagButton">Information</label>
+            <div class="tagGroupHome">
+              <label class="tagButton ">Information</label>
               <label class="tagButton">Information</label>
             </div> 
-            <div>
+            <div class="tagGroupHome">
               <label class="tagButton">Information</label>
               <label class="tagButton">Information</label>
             </div> 
@@ -55,16 +63,11 @@ function Compare() {
 
       <h1 class="heading1">Graphs</h1>
 
-  <div class="container-fluid row">
-    <div class="col-lg-6">
-      <h2 class="heading2B">Mana cost (bar chart)</h2>
-    </div>
-    <div class="col-lg-6">
-        <h2 class="heading2B">Power vs. Toughness (multi series pie chart)</h2>
-    </div>
+  <div class="container-fluid row chartPadding">
+      <ManaCost />
+    <PowerToughness />
+    <ManaColours />
   </div>
-
-      <h2 class="heading2B">Mana colours (radar chart)</h2>
 
   </section>
       <NavigationBar />
