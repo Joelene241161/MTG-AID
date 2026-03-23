@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
+import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
 import Accordion from 'react-bootstrap/Accordion';
 
 //get one card object

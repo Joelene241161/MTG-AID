@@ -3,9 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logomtg from './assets/logomtg.svg';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./home";
-import Timeline from "./timeline";
-import Compare from "./compare";
+import Home from "./pages/home";
+import Timeline from "./pages/timeline";
+import Compare from "./pages/compare";
 
 function App() {
   return (

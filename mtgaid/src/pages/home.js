@@ -1,9 +1,9 @@
-import './App.css';
+import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
-import SingleCard from "./singleCard";
-import AccordionLearn from './accordian';
-import NavigationBar from './navigationBar';
+import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
+import SingleCard from "../components/singleCard";
+import AccordionLearn from '../components/accordian';
+import NavigationBar from '../components/navigationBar';
 
 function Home() {
   return (

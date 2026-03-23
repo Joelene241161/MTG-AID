@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
+import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
 
 //get one card object
 function SingleCard() {

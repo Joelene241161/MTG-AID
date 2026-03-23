@@ -1,8 +1,8 @@
-import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
-import NavigationBar from './navigationBar';
-import ManaCost from './manaCost';
-import PowerToughness from './powerToughness';
-import ManaColours from './manaColour';
+import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
+import NavigationBar from '../components/navigationBar';
+import ManaCost from '../components/manaCost';
+import PowerToughness from '../components/powerToughness';
+import ManaColours from '../components/manaColour';
 
 function Compare() {
   return(

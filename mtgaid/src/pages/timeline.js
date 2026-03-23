@@ -1,6 +1,6 @@
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import NavigationBar from './navigationBar';
+import NavigationBar from '../components/navigationBar';
 
 function Timeline() {
   return (

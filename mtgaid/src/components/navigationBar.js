@@ -1,4 +1,4 @@
-import logomtg from './assets/logomtg.svg';
+import logomtg from '../assets/logomtg.svg';
 import { Link } from "react-router-dom";
 
 function NavigationBar() {
