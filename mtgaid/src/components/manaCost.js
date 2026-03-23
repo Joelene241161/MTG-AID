@@ -1,8 +1,8 @@
 import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
-const ManaCost = () => {
- const labels = ["Card 1", "Card 2"];
+const ManaCost = ({ cardL, cardR }) => {
+ const labels = [cardL?.name || "Card 1", cardR?.name || "Card 2"];
   const data = {
     labels: labels,
     datasets: [
@@ -10,7 +10,7 @@ const ManaCost = () => {
         label: "Mana Cost",
         backgroundColor: ["#61dafb", "#217835"],
         borderColor: "#0E3D19",
-        data: [7, 4],
+        data: [cardL?.cmc || 0, cardR?.cmc || 0], //? waits for data from the API to be loaded
       },
     ],
   };

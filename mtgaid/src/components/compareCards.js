@@ -1,87 +1,69 @@
 import { useState, useEffect } from "react";
-import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
+import CompareCardsL from '../components/compareCardsL';
+import CompareCardsR from '../components/compareCardsR';
+import ManaCost from '../components/manaCost';
+import PowerToughness from '../components/powerToughness';
+import ManaColours from '../components/manaColour';
 
-//this components fetches the data we need to populate the graphs and the comparison page
-function CompareCards() {
-  const [card, setCard] = useState(null);
+function ComparisonPage() {
+  const [cardL, setCardL] = useState(null);
+  const [cardR, setCardR] = useState(null);
 
-  const getCard = () => {
-    fetch(`https://api.magicthegathering.io/v1/cards?types=creature`) //filters so that only creatures show
+    //stores and displays the data necessary for compare page.
+
+  const getCard = (side) => {
+    fetch(`https://api.magicthegathering.io/v1/cards?types=creature`)
       .then((response) => response.json())
       .then((data) => {
         const cardsArray = data.cards; 
-        
+
         //Checks if there are cards
         if (cardsArray && cardsArray.length > 0) {
-          //gets a random card. A random decimal between 1 and 0 is generated, then multiplies it by the number of cards in the array. Math.floor rounds the number.
           const randomIndex = Math.floor(Math.random() * cardsArray.length);
-          // setCard was null, now has the single card in it so it rerenders the elements.
-          setCard(cardsArray[randomIndex]); 
+
+        //gets a random card. A random decimal between 1 and 0 is generated, then multiplies it by the number of cards in the array. Math.floor rounds the number.
+
+          const newCard = cardsArray[randomIndex];
+
+        //newCard is the object made from cardsArray
+
+        // setCard was null, now has the single card in it so it rerenders the elements. === make sure the data type and values are the same
+          
+          if (side === 'left') setCardL(newCard);
+          if (side === 'right') setCardR(newCard);
         }
       })
       .catch((error) => console.log(error));
   };
 
+  // When the page is loaded run getCard
   useEffect(() => {
-    getCard();
+    getCard('left');
+    getCard('right');
   }, []);
 
-  //html that will be displayed on the compare page
   return (
-    <div>
-      {card ? ( //checks if card has been loaded
-        <div key={card.id}>
-
-    <div class="buttonMiddle">
-      <button class="primaryButton" onClick={getCard}>Randomise card</button>
-    </div>
-
-    <h2 class="heading2B">{card.name}</h2>
-
-    <img src={card.imageUrl || fillerHeroHeader} class="singleCard"></img>
-    <p class="bodyTextCenter">{card.text}</p>
-
-    <div class="container-fluid row">
-            <div class="tagGroupHome">
-              <label class="tagButton">Subtype: {card.subtypes || "N/A"}</label>
-              <label class="tagButton">Rarity: {card.rarity}</label>
-            </div> 
-            <div class="tagGroupHome">
-              <label class="tagButton">Set: {card.set}</label>
-              <label class="tagButton">Artist: {card.artist}</label>
-            </div> 
-        </div> 
-
-    </div>
-      ) : ( //if card has not been loaded yet, shows this instead
+    <div className="container">
+      <div className="row">
+        {}
         <div class="col-lg-6">
-          
-          <h3 class="loadingText">Loading example of card...</h3>
+            <CompareCardsL card={cardL} onRandomise={() => getCard('left')} />
+        </div>
+        <div class="col-lg-6">
+            <CompareCardsR card={cardR} onRandomise={() => getCard('right')} />
+        </div>
+      </div>
+    <h1 class="heading1">Graphs</h1>
 
-    <div class="buttonMiddle">
-      <button class="primaryButton">Randomise card</button>
-    </div>
+    <div class="container-fluid row chartPadding">
+      {/* needed to run js, next part is error handling */} 
+        {cardL && cardR && <ManaCost cardL={cardL} cardR={cardR} />}
+    <PowerToughness /> 
+    <ManaColours />
+  </div>
 
-    <h2 class="heading2B">Card name: </h2>
-
-    <img src={fillerHeroHeader} class="heroImage"></img>
-    <p class="bodyTextCenter">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
-
-    <div class="container-fluid row">
-            <div class="tagGroupHome">
-              <label class="tagButton">Information</label>
-              <label class="tagButton">Information</label>
-            </div> 
-            <div class="tagGroupHome">
-              <label class="tagButton">Information</label>
-              <label class="tagButton">Information</label>
-            </div> 
-        </div> 
-
-    </div>
-      )}
     </div>
   );
 }
 
-export default CompareCards;
+export default ComparisonPage;
