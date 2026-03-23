@@ -1,8 +1,8 @@
 import Chart from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 
-const PowerToughness = () => {
- const labels = ["Card 1", "Card 2"];
+const PowerToughness = ({ cardL, cardR }) => {
+ const labels = [cardL?.name || "Card 1", cardR?.name || "Card 2"];
   const data = {
     labels: labels,
     datasets: [
@@ -10,13 +10,13 @@ const PowerToughness = () => {
         label: "Power",
         backgroundColor: ["#61dafb", "#217835"],
         borderColor: "#0E3D19",
-        data: [7, 4],
+        data: [cardL?.power || 0, cardR?.power || 0],
       },
       {
         label: "Toughness",
         backgroundColor: ["#61dafb", "#217835"],
         borderColor: "#0E3D19",
-        data: [6, 3],
+        data: [cardL?.toughness || 0, cardR?.toughness || 0],
       },
     ],
   };

@@ -58,8 +58,8 @@ function ComparisonPage() {
     <div class="container-fluid row chartPadding">
       {/* needed to run js, next part is error handling */} 
         {cardL && cardR && <ManaCost cardL={cardL} cardR={cardR} />}
-    <PowerToughness /> 
-    <ManaColours />
+        {cardL && cardR && <PowerToughness cardL={cardL} cardR={cardR} />}
+        {cardL && cardR && <ManaColours cardL={cardL} cardR={cardR} />}
   </div>
 
     </div>
