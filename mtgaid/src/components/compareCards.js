@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
-import fillerHeroHeader from './assets/fillerHeroHeader.jpg';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import fillerHeroHeader from '../assets/fillerHeroHeader.jpg';
 
-//get one card object
+//this components fetches the data we need to populate the graphs and the comparison page
 function CompareCards() {
-  const [card, setCard] = useState();
-
-  const cardId = "386616";
+  const [card, setCard] = useState(null);
 
   const getCard = () => {
-    fetch(`https://api.magicthegathering.io/v1/cards/${cardId}`)
+    fetch(`https://api.magicthegathering.io/v1/cards?types=creature`) //filters so that only creatures show
       .then((response) => response.json())
       .then((data) => {
-        setCard(data.card); 
+        const cardsArray = data.cards; 
+        
+        //Checks if there are cards
+        if (cardsArray && cardsArray.length > 0) {
+          //gets a random card. A random decimal between 1 and 0 is generated, then multiplies it by the number of cards in the array. Math.floor rounds the number.
+          const randomIndex = Math.floor(Math.random() * cardsArray.length);
+          // setCard was null, now has the single card in it so it rerenders the elements.
+          setCard(cardsArray[randomIndex]); 
+        }
       })
       .catch((error) => console.log(error));
   };
@@ -22,80 +26,59 @@ function CompareCards() {
     getCard();
   }, []);
 
-  //html that will be displayed on the comparison page
+  //html that will be displayed on the compare page
   return (
     <div>
       {card ? ( //checks if card has been loaded
-        <div key={card.id} class="col-lg-6" >
-      <h2 class="heading2B">{card.name}</h2>
+        <div key={card.id}>
 
-    <>
-      {[DropdownButton].map((DropdownType, idx) => (
-        <DropdownType
-          key={idx}
-          id={`dropdown-button-drop-${idx}`}
-          size="lg"
-          title="Choose a set"
-          variant="info"
-        >
-          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-          <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-        </DropdownType>
-      ))}
-    </>
+    <div class="buttonMiddle">
+      <button class="primaryButton" onClick={getCard}>Randomise card</button>
+    </div>
 
-    <img src={card.imageUrl} class="singleCard"></img>
-    <p class="bodyText">{card.text}</p>
+    <h2 class="heading2B">{card.name}</h2>
+
+    <img src={card.imageUrl || fillerHeroHeader} class="singleCard"></img>
+    <p class="bodyTextCenter">{card.text}</p>
 
     <div class="container-fluid row">
-            <div>
-              <button class="tagButton">Type: {card.types}</button>
-              <button class="tagButton">Rarity: {card.rarity}</button>
-              <button class="tagButton">Set: {card.set}</button>
-              <button class="tagButton">Artist: {card.artist}</button>
+            <div class="tagGroupHome">
+              <label class="tagButton">Subtype: {card.subtypes || "N/A"}</label>
+              <label class="tagButton">Rarity: {card.rarity}</label>
+            </div> 
+            <div class="tagGroupHome">
+              <label class="tagButton">Set: {card.set}</label>
+              <label class="tagButton">Artist: {card.artist}</label>
             </div> 
         </div> 
 
     </div>
       ) : ( //if card has not been loaded yet, shows this instead
-        <div>
-        <h3 class="loadingText">Loading example of card...</h3>
-            <div class="col-lg-6">
-      <h2 class="heading2B">{card.name}</h2>
+        <div class="col-lg-6">
+          
+          <h3 class="loadingText">Loading example of card...</h3>
 
-    <>
-      {[DropdownButton].map((DropdownType, idx) => (
-        <DropdownType
-          key={idx}
-          id={`dropdown-button-drop-${idx}`}
-          size="lg"
-          title="Choose a set"
-          variant="info"
-        >
-          <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-          <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-          <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-          <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-        </DropdownType>
-      ))}
-    </>
+    <div class="buttonMiddle">
+      <button class="primaryButton">Randomise card</button>
+    </div>
+
+    <h2 class="heading2B">Card name: </h2>
 
     <img src={fillerHeroHeader} class="heroImage"></img>
-    <p class="bodyText">{card.text}</p>
+    <p class="bodyTextCenter">Description of card / card text. Description of card / card text. Description of card / card text. Description of card / card text. </p>
 
     <div class="container-fluid row">
-            <div>
-              <button class="tagButton">Type: N/A</button>
-              <button class="tagButton">Rarity: N/A</button>
-              <button class="tagButton">Set: N/A</button>
-              <button class="tagButton">Artist: N/A</button>
+            <div class="tagGroupHome">
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
+            </div> 
+            <div class="tagGroupHome">
+              <label class="tagButton">Information</label>
+              <label class="tagButton">Information</label>
             </div> 
         </div> 
 
     </div>
-        </div>
       )}
     </div>
   );

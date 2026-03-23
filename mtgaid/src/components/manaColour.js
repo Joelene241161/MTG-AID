@@ -15,8 +15,8 @@ const ManaColours = () => {
       },
       {
         label: "Card 2",
-        backgroundColor: ["#fefbd676"],
-        borderColor: "#FEFBD6",
+        backgroundColor: ["#0E3D19"],
+        borderColor: "#217835",
         data: [0, 1, 1, 0, 0],
         fill: true,
       },

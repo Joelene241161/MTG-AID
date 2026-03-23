@@ -8,7 +8,7 @@ const ManaCost = () => {
     datasets: [
       {
         label: "Mana Cost",
-        backgroundColor: ["#61dafb", "#FEFBD6"],
+        backgroundColor: ["#61dafb", "#217835"],
         borderColor: "#0E3D19",
         data: [7, 4],
       },
