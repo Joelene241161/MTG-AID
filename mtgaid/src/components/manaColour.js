@@ -2,25 +2,28 @@ import Chart from "chart.js/auto";
 import { Radar } from "react-chartjs-2";
 
 const ManaColours = ({ cardL, cardR }) => {
-
+    //Sets initial values as 0 for left card
   var colourWhiteL = 0;//W
   var colourRedL = 0;//R
   var colourBlueL = 0;//U
   var colourGreenL = 0;//G
   var colourBlackL = 0;//B
 
+    //Sets initial values as 0 for Right card
   var colourWhiteR = 0;//W
   var colourRedR = 0;//R
   var colourBlueR = 0;//U
   var colourGreenR = 0;//G
   var colourBlackR = 0;//B
 
+    //changes value if the color is present (Right)
   if (cardR.colors == 'W'){var colourWhiteR = 1;}
   if (cardR.colors == 'R'){var colourRedR = 1;}
   if (cardR.colors == 'U'){var colourBlueR = 1;}
   if (cardR.colors == 'G'){var colourGreenR = 1;}
   if (cardR.colors == 'B'){var colourBlackR = 1;}
 
+    //changes value if the color is present (Left)
   if (cardL.colors == 'W'){var colourWhiteL = 1;}
   if (cardL.colors == 'R'){var colourRedL = 1;}
   if (cardL.colors == 'U'){var colourBlueL = 1;}

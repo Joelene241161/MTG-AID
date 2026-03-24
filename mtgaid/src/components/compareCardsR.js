@@ -14,7 +14,9 @@ function CompareCardsR({ card, onRandomise }) {
 
     <h2 class="heading2B">{card.name}</h2>
 
-    <img src={card.imageUrl || fillerHeroHeader} class="singleCard"></img>
+    <img src={card.imageUrl || fillerHeroHeader} class="compareCard"></img>
+
+    {/* //This section is necessary, if the card image doesn't load from the API and for screen readers. */}
     <p class="bodyTextCenter">{card.text}</p>
 
     <div class="container-fluid row">

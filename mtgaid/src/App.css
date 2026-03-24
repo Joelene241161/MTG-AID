@@ -135,7 +135,7 @@ nav {
   font-weight:bold;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
+  padding-top: 4%;
 }
 
 .dropdown {
@@ -222,4 +222,22 @@ nav {
 
 .chartPadding {
   padding: 4%;
+}
+
+.compareCard {
+  justify-content: center;
+  width: 70%;
+  padding-left: 30%;
+  margin-bottom: 2%;
+}
+
+.dropdown {
+  padding-top: 1.5%;
+  padding-bottom: 0%;
+}
+
+.styleChartLine {
+  padding: 27%;
+  padding-top: 2%;
+  padding-bottom: 5%;
 }

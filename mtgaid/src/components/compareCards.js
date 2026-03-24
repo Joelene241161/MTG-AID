@@ -10,7 +10,7 @@ function ComparisonPage() {
   const [cardR, setCardR] = useState(null);
 
     //stores and displays the data necessary for compare page.
-
+        //side is a parameter that gets replaced/defined with left or right.
   const getCard = (side) => {
     fetch(`https://api.magicthegathering.io/v1/cards?types=creature`)
       .then((response) => response.json())
@@ -27,7 +27,7 @@ function ComparisonPage() {
 
         //newCard is the object made from cardsArray
 
-        // setCard was null, now has the single card in it so it rerenders the elements. === make sure the data type and values are the same
+        // setCard was null, now has the single card in it so it rerenders the elements. === makes sure the data type and values are the same
           
           if (side === 'left') setCardL(newCard);
           if (side === 'right') setCardR(newCard);
@@ -56,7 +56,7 @@ function ComparisonPage() {
     <h1 class="heading1">Graphs</h1>
 
     <div class="container-fluid row chartPadding">
-      {/* needed to run js, next part is error handling */} 
+      {/* Error handling. The charts only render if the card data has been fetched from the API*/} 
         {cardL && cardR && <ManaCost cardL={cardL} cardR={cardR} />}
         {cardL && cardR && <PowerToughness cardL={cardL} cardR={cardR} />}
         {cardL && cardR && <ManaColours cardL={cardL} cardR={cardR} />}
