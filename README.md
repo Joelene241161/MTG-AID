@@ -138,16 +138,16 @@ To see a run through of the application, click below:
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[image1]: frontend/src/Assets/ReadMeimages/hero.png
-[image2]: frontend/src/Assets/ReadMeimages/example.png
-[image3]: frontend/src/Assets/ReadMeimages/Learn.png
-[image4]: frontend/src/Assets/ReadMeimages/compare%20top.png
-[image5]: frontend/src/Assets/ReadMeimages/compare%20middle.png
-[image6]: frontend/src/Assets/ReadMeimages/compare%20bottom.png
-[image7]: frontend/src/Assets/ReadMeimages/timeline.png
-[image8]: frontend/src/Assets/ReadMeimages/timeline%20open.png
-[image9]: frontend/src/Assets/ReadMeimages/Wireframes.png
-[image10]: frontend/src/Assets/ReadMeimages/MTGAIDusecasediagram.png
+[image1]: ./mtgaid/src/assets/read%20me/hero.png
+[image2]: ./mtgaid/src/assets/read%20me/example.png
+[image3]: ./mtgaid/src/assets/read%20me/Learn.png
+[image4]: ./mtgaid/src/assets/read%20me/compare%20top.png
+[image5]: ./mtgaid/src/assets/read%20me/compare%20middle.png
+[image6]: ./mtgaid/src/assets/read%20me/compare%20bottom.png
+[image7]: ./mtgaid/src/assets/read%20me/timeline.png
+[image8]: ./mtgaid/src/assets/read%20me/timeline%20open.png
+[image9]: ./mtgaid/src/assets/read%20me/Wireframes.png
+[image10]: ./mtgaid/src/assets/read%20me/MTGAIDusecasediagram.png
 
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
