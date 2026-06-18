@@ -20,7 +20,7 @@
 <p align="center">
 
   <a href="https://github.com/username/projectname">
-    <img src="./frontend/src/Assets/images/DeluxeLogo.svg" alt="Logo" width="140" height="140">
+    <img src="./mtgaid/src/assets/read me/LOGO.png" alt="Logo" width="140"
   </a>
   
   # MTG AID
@@ -92,21 +92,23 @@ Run the following in the command-line to install node.js:
 
 Users can see learn what type of data a card contains and what each data point means in the contet of the game.
 
-![Account][image2]
+![image1][image1]
+![image2][image2]
+![image3][image3]
 
 ### Compare cards
 
 Users can compare two random Magic: The Gathering cards. The data is compared in charts, and the selected cards can be changed for a different random card.
-![image3][image3]
 ![image4][image4]
 ![image5][image5]
+![image6][image6]
 
 
 ### Timeline
 
 Users can compare 5 different cards, and switch between different properties.
-![image6][image6]
-![image15][image15]
+![image7][image7]
+![image8][image8]
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -116,11 +118,11 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Wireframes
 
-![image10][image10]
+![image9][image9]
 
 ### Use case diagram
 
-![image14][image14]
+![image10][image10]
 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
@@ -136,23 +138,16 @@ To see a run through of the application, click below:
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[image1]: frontend/src/Assets/ReadMeimages/hero-header.png
-[image2]: frontend/src/Assets/ReadMeimages/account.png
-[image3]: frontend/src/Assets/ReadMeimages/form-check.png
-[image4]: frontend/src/Assets/ReadMeimages/form-date.png
-[image5]: frontend/src/Assets/ReadMeimages/form-pay.png
-[image6]: frontend/src/Assets/ReadMeimages/product.png
-[image7]: frontend/src/Assets/ReadMeimages/sign-up.png
-[image8]: frontend/src/Assets/ReadMeimages/spassword.png
-[image9]: frontend/src/Assets/ReadMeimages/planning%20document.png
-[image10]: frontend/src/Assets/ReadMeimages/wireframes1.png
-[image11]: frontend/src/Assets/ReadMeimages/wireframes2.png
-[image12]: frontend/src/Assets/ReadMeimages/wireframes3.png
-[image13]: frontend/src/Assets/ReadMeimages/wireframes4.png
-[image14]: frontend/src/Assets/ReadMeimages/userflow.png
-[image15]: frontend/src/Assets/ReadMeimages/product-listings.png
-[image16]: frontend/src/Assets/ReadMeimages/create-listings.png
-[image17]: frontend/src/Assets/ReadMeimages/ReviewForm.jpeg
+[image1]: frontend/src/Assets/ReadMeimages/hero.png
+[image2]: frontend/src/Assets/ReadMeimages/example.png
+[image3]: frontend/src/Assets/ReadMeimages/Learn.png
+[image4]: frontend/src/Assets/ReadMeimages/compare%20top.png
+[image5]: frontend/src/Assets/ReadMeimages/compare%20middle.png
+[image6]: frontend/src/Assets/ReadMeimages/compare%20bottom.png
+[image7]: frontend/src/Assets/ReadMeimages/timeline.png
+[image8]: frontend/src/Assets/ReadMeimages/timeline%20open.png
+[image9]: frontend/src/Assets/ReadMeimages/Wireframes.png
+[image10]: frontend/src/Assets/ReadMeimages/MTGAIDusecasediagram.png
 
 <!-- Refer to https://shields.io/ for more information and options about the shield links at the top of the ReadMe file -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
